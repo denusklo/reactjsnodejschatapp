@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 body {
-    background-color: rgb(18, 22, 22);
+	background-image: url('../public/pexels-eberhard-grossgasteiger-691668.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
 }
 
 ::-webkit-scrollbar-track
