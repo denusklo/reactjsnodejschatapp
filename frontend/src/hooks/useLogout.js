@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 import { useAuthContext } from '../context/auth.context';
 
 const useLogout = () => {
