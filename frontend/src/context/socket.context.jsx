@@ -1,9 +1,6 @@
 import { createContext, useEffect, useState, useContext } from "react";
 import { useAuthContext } from "./auth.context";
 import { io } from "socket.io-client";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 
 const SocketContext = createContext();
@@ -19,7 +16,7 @@ export const SocketContextProvider = ({children}) => {
 
     useEffect(() => {
         if (authUser) {
-            const socket = io( process.env.FRONTEND_URL , {
+            const socket = io( import.meta.env.FRONTEND_URL , {
                 query: {
                     userId: authUser._id,
                 }
