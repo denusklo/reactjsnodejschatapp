@@ -16,7 +16,7 @@ export const SocketContextProvider = ({children}) => {
 
     useEffect(() => {
         if (authUser) {
-            const socket = io("http://localhost:1130", {
+            const socket = io( process.env.FRONTEND_URL , {
                 query: {
                     userId: authUser._id,
                 }
